@@ -3,11 +3,12 @@ Windows remote desktop (RDP), VNC, VMRC, SSH, Telnet, RAS, ICA Citrix, HTTP and 
 See [features list](/Docs/Features-and-Screen-shots.md)
 
 # Downloads
-* [Terminals Version 4.0.0 - Installer (msi deploy)](https://terminals.codeplex.com/downloads/get/1653230)
-* [Terminals Version 4.0.0 - Deployable Bits (xcopy deploy)](https://terminals.codeplex.com/downloads/get/1653231)
+* [Terminals Version 4.0.1](https://github.com/Terminals-Origin/Terminals/releases/tag/4.0.1)
 * [Chocolatey package](https://chocolatey.org/packages/terminals) 
 
 # News
+* **June 26, 2017** - New release version 4.0.1
+* **May 17, 2017** - New record 40k downloads of version 4.0
 * **April 5, 2017** - [Road map](/Docs/Road-map.md) for next features
 * **April 2, 2017** - Version 4.0.0 release published  
 New Options to disable protocol plugins
@@ -16,7 +17,7 @@ We are happy to announce that Chocolatey terminals package is now maintained by 
 
 # Donate
 * Keep the project Alive!
-* [![$25](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?business=rob.chartier@gmail.com&cmd=_xclick&currency_code=USD&amount=25&item_name=Terminals%20Open%20Source%20Project%20-%20%2425)
+* [![$25](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X28G9FEYUN6CJ)
 
 # Documentation
 * **[User documentation](/Docs/User-documentation.md)**

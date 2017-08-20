@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Configuration\AuthMethod.cs" />
     <Compile Include="Configuration\KeysSection.cs" />
+    <Compile Include="Connections\IFocusable.cs" />
     <Compile Include="Connections\IOptionsConverter.cs" />
     <Compile Include="Connections\IOptionsConverterFactory.cs" />
     <Compile Include="Connections\OptionsConversionContext.cs" />
@@ -78,6 +79,7 @@
       <DependentUpon>CredentialsPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditFavorite\ISupportsSecurityControl.cs" />
+    <Compile Include="Forms\ExternalLinks.cs" />
     <Compile Include="Forms\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>

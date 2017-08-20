@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <!--to make new release change all product id, package id and version number-->
-  <Product Id="*" Name="Terminals" Language="1033" Version="4.0.0.0" Manufacturer="Robert Chartier"
+  <Product Id="*" Name="Terminals" Language="1033" Version="4.0.1.0" Manufacturer="Robert Chartier"
            UpgradeCode="DD0D31A2-2E86-4F3F-98CE-6AED37FF24CD">
     <Package Id="*" InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
     <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A newer version of Terminals is already installed." />
@@ -21,10 +21,10 @@
       <ComponentGroupRef Id="MainComponents" />
       <ComponentGroupRef Id="IcaComponents" />
       <ComponentGroupRef Id="RdpComponents" />
-      <ComponentGroupRef Id="TerminalComponents" />
       <ComponentGroupRef Id="VmrcComponents" />
       <ComponentGroupRef Id="VncComponents" />
       <ComponentGroupRef Id="WebComponents" />
+      <ComponentGroupRef Id="PuttyComponents" />
       <ComponentRef Id="ApplicationShortcut" />
     </Feature>
 
@@ -47,7 +47,9 @@
           <Directory Id="PLUGINSFOLDER" Name="Plugins">
             <Directory Id="ICAFOLDER" Name="Ica" />
             <Directory Id="RDPFOLDER" Name="Rdp" />
-            <Directory Id="TERMINALFOLDER" Name="Terminal" />
+            <Directory Id="PUTTYFOLDER" Name="Putty" >
+              <Directory Id="PUTTYRESOURCESFOLDER" Name="Resources" />
+            </Directory>    
             <Directory Id="VMRCFOLDER" Name="Vmrc" />
             <Directory Id="VNCFOLDER" Name="Vnc" />
             <Directory Id="WEBFOLDER" Name="Web" />

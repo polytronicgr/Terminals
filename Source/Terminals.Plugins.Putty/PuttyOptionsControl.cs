@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
+using Terminals.Common.Forms;
 using Terminals.Data;
 using Terminals.Forms.EditFavorite;
 
@@ -9,11 +11,8 @@ namespace Terminals.Plugins.Putty
         public PuttyOptionsControl()
         {
             this.InitializeComponent();
-
-            var puttyRegistry = new PuttyRegistry();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = puttyRegistry.GetSessions();
-            this.cmbSessionName.DataSource = bindingSource;
+            this.RefreshSessions();
+            this.cmbSessionName.DataSource = this.sessionsBindingSource;
             this.cmbSessionName.SelectedItem = null;
         }
 
@@ -47,6 +46,23 @@ namespace Terminals.Plugins.Putty
                 puttyOptions.SessionName = this.cmbSessionName.Text;
                 puttyOptions.Verbose = this.checkBoxVerbose.Checked;
             }
+        }
+
+        private void EditSessinsButton_Click(object sender, EventArgs e)
+        {
+            var puttyBinaryPath = PuttyConnection.GetPuttyBinaryPath();
+            ExternalLinks.OpenPath(puttyBinaryPath);
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            this.RefreshSessions();
+        }
+
+        private void RefreshSessions()
+        {
+            var puttyRegistry = new PuttyRegistry();
+            this.sessionsBindingSource.DataSource = puttyRegistry.GetSessions();
         }
     }
 }

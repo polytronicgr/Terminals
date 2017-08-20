@@ -81,6 +81,12 @@
       <Component Id="MainIcon" Guid="77AAEF17-7034-441B-B853-879DA390251C">
         <File Source="..\Terminals\terminalsicon.ico" KeyPath="yes"/>
       </Component>
+      <Component Id="NewtonsoftJsondll" Guid="CFB96E07-01CB-42DE-949F-8CA36DA08E2C">
+        <File Source="..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll" KeyPath="yes" Checksum="yes"/>
+      </Component> 
+      <Component Id="NewtonsoftJsonxml" Guid="2D006559-AE17-439A-A379-7876483CEB25">
+        <File Source="..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
     </ComponentGroup>
     <ComponentGroup Id="IcaComponents" Directory="ICAFOLDER">
       <Component Id="AxWFICALibDll" Guid="E3A4BF7F-538C-40F3-A5D0-736E2478E9AE">
@@ -102,20 +108,6 @@
       </Component>
       <Component Id="PluginRdp" Guid="E33BF837-A732-41A7-81C4-8F90282DCBC1">
         <File Source="$(var.Terminals.Plugins.Rdp.TargetPath)" KeyPath="yes" Checksum="yes"/>
-      </Component>
-    </ComponentGroup>
-    <ComponentGroup Id="TerminalComponents" Directory="TERMINALFOLDER">
-      <Component Id="GranadosDll" Guid="9748FD50-3853-4FF5-AC40-4F737F4A261A">
-        <File Source="$(var.Granados.TargetPath)" KeyPath="yes" Checksum="yes"/>
-      </Component>
-      <Component Id="SSHClientDll" Guid="DF5AEE72-4C84-49EF-A59E-2664AA51685D">
-        <File Source="$(var.SSHClient.TargetPath)" KeyPath="yes" Checksum="yes"/>
-      </Component>
-      <Component Id="TerminalEmulatorDll" Guid="61B42519-1D0B-4012-8095-F0D7D04A6566">
-        <File Source="$(var.TerminalEmulator.TargetPath)" KeyPath="yes" Checksum="yes"/>
-      </Component>
-      <Component Id="PluginTerminal" Guid="7DDA8745-FDCC-4A03-9860-0858ED3A759A">
-        <File Source="$(var.Terminals.Plugins.Terminal.TargetPath)" KeyPath="yes" Checksum="yes"/>
       </Component>
     </ComponentGroup>
     <ComponentGroup Id="VmrcComponents" Directory="VMRCFOLDER">
@@ -143,6 +135,20 @@
     <ComponentGroup Id="WebComponents" Directory="WEBFOLDER">
       <Component Id="PluginWeb" Guid="5AB65AB2-1CD3-4A65-8021-BF758CC7725A">
         <File Source="$(var.Terminals.Plugins.Web.TargetPath)" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="PuttyComponents">
+      <Component Id="puttyexe" Guid="3944DCB6-AF12-47DC-B929-90BAFAF87518" Directory="PUTTYRESOURCESFOLDER">
+        <File Source="..\..\Resources\Libraries\Putty\putty.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="puttygenexe" Guid="1902333C-37A1-454E-A01D-3785C7F6DFBA" Directory="PUTTYRESOURCESFOLDER">
+        <File Source="..\..\Resources\Libraries\Putty\puttygen.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="pageantexe" Guid="0C4ACBB2-9BAD-4752-9DBE-9345F89843BE" Directory="PUTTYRESOURCESFOLDER">
+        <File Source="..\..\Resources\Libraries\Putty\pageant.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="PluginTerminal" Guid="EBACB294-80C3-4EA5-804E-62AB738BFAA9" Directory="PUTTYFOLDER">
+        <File Source="$(var.Terminals.Plugins.Putty.TargetPath)" KeyPath="yes" Checksum="yes"/>
       </Component>
     </ComponentGroup>
   </Fragment>

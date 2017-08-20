@@ -34,13 +34,20 @@ namespace Terminals.Plugins.Putty
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbSessionName = new System.Windows.Forms.ComboBox();
             this.labelSession = new System.Windows.Forms.Label();
             this.checkBoxVerbose = new System.Windows.Forms.CheckBox();
+            this.editSessinsButton = new System.Windows.Forms.Button();
+            this.editToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.sessionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.sessionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSessionName
             // 
+            this.cmbSessionName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSessionName.FormattingEnabled = true;
             this.cmbSessionName.Location = new System.Drawing.Point(107, 27);
             this.cmbSessionName.Name = "cmbSessionName";
@@ -66,15 +73,39 @@ namespace Terminals.Plugins.Putty
             this.checkBoxVerbose.Text = "Verbose";
             this.checkBoxVerbose.UseVisualStyleBackColor = true;
             // 
+            // editSessinsButton
+            // 
+            this.editSessinsButton.Location = new System.Drawing.Point(376, 26);
+            this.editSessinsButton.Name = "editSessinsButton";
+            this.editSessinsButton.Size = new System.Drawing.Size(50, 23);
+            this.editSessinsButton.TabIndex = 6;
+            this.editSessinsButton.Text = "Edit";
+            this.editToolTip.SetToolTip(this.editSessinsButton, "Open putty to edit sessions");
+            this.editSessinsButton.UseVisualStyleBackColor = true;
+            this.editSessinsButton.Click += new System.EventHandler(this.EditSessinsButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Image = global::Terminals.Plugins.Putty.Properties.Resources.Refresh;
+            this.refreshButton.Location = new System.Drawing.Point(342, 26);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(27, 23);
+            this.refreshButton.TabIndex = 7;
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // PuttyOptionsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.refreshButton);
+            this.Controls.Add(this.editSessinsButton);
             this.Controls.Add(this.checkBoxVerbose);
             this.Controls.Add(this.labelSession);
             this.Controls.Add(this.cmbSessionName);
             this.Name = "PuttyOptionsControl";
             this.Size = new System.Drawing.Size(650, 443);
+            ((System.ComponentModel.ISupportInitialize)(this.sessionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,5 +116,9 @@ namespace Terminals.Plugins.Putty
         #endregion
 
         private CheckBox checkBoxVerbose;
+        private Button editSessinsButton;
+        private ToolTip editToolTip;
+        private Button refreshButton;
+        private BindingSource sessionsBindingSource;
     }
 }
